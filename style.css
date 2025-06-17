@@ -25,10 +25,10 @@
     border: 2px solid #0070c0 !important;
 }
 .laso-wrapper {
-    width: 90vh;
-    height: 118vh;
-    max-width: 90vw;
-    max-height: 115vw;
+    width: 100vh;
+    height: 130vh;
+    max-width: 95vw;
+    max-height: 125vw;
     aspect-ratio: 3/4;
     display: flex;
     align-items: center;
@@ -234,6 +234,14 @@
     font-family: Arial, sans-serif !important;
     align-items: flex-end;
     width: max-content;
+}
+.saodv-loc-ton,
+.saodv-kinh-duong,
+.saodv-da-la {
+    margin-bottom: 2px;
+    font-size: 13px;
+    text-align: left;
+    width: 80px;
 }
 
 
