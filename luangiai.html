@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Luận Giải Lá Số Tử Vi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f8f8f8;
+            color: #222;
+        }
+
+        h1, h2, h3 {
+            color: #23408e;
+        }
+
+        section {
+            background: #fff;
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 0 8px #0001;
+        }
+
+        .cung-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .cung-item {
+            background: #e9f0fb;
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 0.97em;
+        }
+
+        .back-btn {
+            background: #23408e;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 24px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-bottom: 28px;
+        }
+
+            .back-btn:hover {
+                background: #16306a;
+            }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="window.location.href='index.html'">Quay về trang chính</button>
+    <h1>LUẬN GIẢI LÁ SỐ TỬ VI</h1>
+    <section>
+        <h2 >Giới Thiệu Tổng Quát</h2>
+        <p id="tong_quan_con_nguoi">
+            Đây là phần tổng quan về lá số tử vi, bao gồm các thông tin cơ bản về ngày, giờ, tháng, năm sinh, cũng như những đặc điểm nổi bật về bản mệnh, vận trình cuộc đời.
+        </p>
+    </section>
+
+    <section>
+        <h2 id="luan_giai_chung">Luận Giải Tổng Quan</h2>
+        <p>
+            Phân tích tổng thể về lá số, những yếu tố nổi bật, ưu điểm và điểm hạn chế, tổng quan vận hạn và các mốc đáng chú ý trong cuộc đời.
+        </p>
+    </section>
+
+    <section>
+        <h2>Luận Giải Các Cung</h2>
+        <div class="cung-list">
+            <div class="cung-item">
+                <h3 id="Luan_giai_cung_Menh">Cung Mệnh</h3>
+                <p>
+                    Mô tả đặc điểm về bản thân, tính cách, khí chất, sức khỏe tổng quát và số phận chung.
+                </p>
+            </div>
+            <div class="cung-item">
+                <h3 id="Luan_giai_cung_Phu_mau">Cung Phụ Mẫu</h3>
+                <p>
+                    Thông tin, mối quan hệ với cha mẹ, tình cảm gia đình, sự hỗ trợ của phụ mẫu.
+                </p>
+            </div>
+            <div class="cung-item">
+                <h3>Cung Phúc Đức</h3>
+                <p>
+                    Phân tích về phúc phần tổ tiên, nền tảng gia tộc, sự may mắn lâu dài.
+                </p>
+            </div>
+            <div class="cung-item">
+                <h3>Cung Điền Trạch</h3>
+                <p>
+                    Nhận định về đất đai, nhà cửa, tài sản cố định, sự ổn định về nơi ăn chốn ở.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Luận Giải Các Cách Cục Lá Số</h2>
+        <p>
+            Tóm tắt các cách cục đặc biệt, bộ sao nổi bật hoặc những điểm mạnh/yếu của lá số, ảnh hưởng tới cuộc sống, sự nghiệp, tình cảm,...
+        </p>
+        <ul>
+            <li>Cách cục 1: Mô tả sơ bộ và ý nghĩa.</li>
+            <li>Cách cục 2: Mô tả sơ bộ và ý nghĩa.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Kết Luận Lá Số</h2>
+        <p>
+            Tổng kết toàn bộ lá số, lời khuyên và định hướng phát triển bản thân, lưu ý các vận hạn, cơ hội lớn trong đời.
+        </p>
+    </section>
+
+    <div class="footer">
+        <button class="back-btn" onclick="window.location.href='index.html'">Quay về trang chính</button>
+        <p>Lá số được luận giải tự động. Vui lòng liên hệ chuyên gia để có kết quả sát thực tế nhất.</p>
+    </div>
+
+
+    <script>
+        // Định nghĩa các hàm sinh nội dung luận giải
+        function gioiThieuTongQuat() {
+            return `<h2>Giới Thiệu Tổng Quát</h2>
+        <p>Đây là phần tổng quan về lá số tử vi, bao gồm các thông tin cơ bản về ngày, giờ, tháng, năm sinh, cũng như những đặc điểm nổi bật về bản mệnh, vận trình cuộc đời.</p>`;
+        }
+
+        function luanGiaiTongQuan() {
+            const saoMenhTaiQuan = localStorage.getItem('menhCach');
+
+            console.log("Mệnh Cách: " + saoMenhTaiQuan)
+            return document.getElementById("tong_quan_con_nguoi")
+                .insertAdjacentHTML('beforeend', `<p>${saoMenhTaiQuan}</p>`);
+        }
+
+        function luanGiaiCacCung() {
+            return `
+        <h2>Luận Giải Các Cung</h2>
+        <ul>
+            <li><b>Cung Mệnh:</b> Mô tả đặc điểm bản thân, tính cách, khí chất, sức khỏe tổng quát và số phận chung.</li>
+            <li><b>Cung Phụ Mẫu:</b> Thông tin, mối quan hệ với cha mẹ, tình cảm gia đình, sự hỗ trợ của phụ mẫu.</li>
+            <li><b>Cung Phúc Đức:</b> Phúc phần tổ tiên, nền tảng gia tộc, sự may mắn lâu dài.</li>
+            <li><b>Cung Điền Trạch:</b> Đất đai, nhà cửa, tài sản cố định, sự ổn định nơi ăn chốn ở.</li>
+            <!-- Thêm các cung khác -->
+        </ul>`;
+        }
+
+        function luanGiaiCachCuc() {
+            return `<h2>Luận Giải Các Cách Cục Lá Số</h2>
+        <ul>
+            <li>Cách cục 1: Mô tả sơ bộ và ý nghĩa.</li>
+            <li>Cách cục 2: Mô tả sơ bộ và ý nghĩa.</li>
+        </ul>`;
+        }
+
+        function ketLuan() {
+            return `<h2>Kết Luận Lá Số</h2>
+        <p>Tổng kết toàn bộ lá số, lời khuyên và định hướng phát triển bản thân, lưu ý các vận hạn, cơ hội lớn trong đời.</p>`;
+        }
+
+        // Hàm tổng hợp nội dung từ các hàm nhỏ
+        function noiDungLuanGiai() {
+            return gioiThieuTongQuat()
+                + luanGiaiTongQuan()
+                + luanGiaiCacCung()
+                + luanGiaiCachCuc()
+                + ketLuan();
+        }
+        luanGiaiTongQuan();
+    </script>
+
+
+
+</body>
+</html>

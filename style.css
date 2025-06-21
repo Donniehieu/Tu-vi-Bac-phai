@@ -247,3 +247,7 @@
 
 
 
+input::placeholder {
+  color: red;
+  opacity: 1; /* Đảm bảo không bị nhạt quá */
+}
